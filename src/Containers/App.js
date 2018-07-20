@@ -2,7 +2,8 @@
 import React, { Component } from 'react';
 import classes from './App.css';
 import Person from '../Components/Persons/Person/Person';
-
+import Persons from '../Components/Persons/Persons'
+import { timingSafeEqual } from 'crypto';
 
 // App Class with components within//
 // First React Course // 
@@ -73,7 +74,12 @@ class App extends Component {
     if(this.state.showPersons){
       
       persons = (
+
         <div>
+          <Persons persons = {this.state.persons}
+            clicked = {this.deletePersonHandler} 
+            changed = {this.nameChangedHandler} />
+
           {this.state.persons.map((person, index) => {
 
             return <Person
@@ -82,9 +88,9 @@ class App extends Component {
               age={person.age}
               key= {person.id}
               changed = {(event) => this.nameChangedHandler(event, person.id)}/>
-
           })}
       </div>
+
       );
 
       btnClass = classes.Red;
