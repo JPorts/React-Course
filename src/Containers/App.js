@@ -1,7 +1,7 @@
 // Import statements to import other source files and other dependencies // 
 import React, { Component } from 'react';
 import classes from './App.css';
-import Person from '../Components/Persons/Person/Person';
+//import Person from '../Components/Persons/Person/Person';
 import Persons from '../Components/Persons/Persons'
 import Cockpit from '../Components/Cockpit/Cockpit'
 // App Class with components within//
